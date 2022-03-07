@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OnlineWallet-MobilApp</string>
+    <string name="username">username</string>
+    <string name="login">login</string>
+    <string name="register_here">registerhere</string>
+    <string name="password">password</string>
 </resources>
