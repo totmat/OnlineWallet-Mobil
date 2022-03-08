@@ -33,9 +33,9 @@ public class Login extends AppCompatActivity {
         textViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(getApplicationContext(), Register.class);
-                //startActivity(intent);
-                //finish();
+                Intent intent = new Intent(getApplicationContext(), Register.class);
+                startActivity(intent);
+                finish();
             }
         });
         loginButton.setOnClickListener(new View.OnClickListener() {
