@@ -8,4 +8,6 @@
     <string name="fullname">fullname</string>
     <string name="email">email</string>
     <string name="login_here">login_here</string>
+    <string name="data_button">button</string>
+    <string name="date">Date</string>
 </resources>

@@ -6,12 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Register">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/constraintLayout"
+        android:layout_width="420dp"
+        android:layout_height="499dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-9dp">
+
 
         <TextView
             android:id="@+id/textView"
@@ -46,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_fullname"
                 android:fontFamily="@font/poppinsmedium"
-                tools:ignore="TextContrastCheck"
+                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_email"
                 android:fontFamily="@font/poppinsmedium"
-                tools:ignore="TextContrastCheck"
+                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_username"
                 android:fontFamily="@font/poppinsmedium"
-                tools:ignore="TextContrastCheck"
+                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,30 +115,33 @@
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_lock_24"
                 android:fontFamily="@font/poppinsmedium"
-                tools:ignore="TextContrastCheck"
+                tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <ProgressBar
             android:id="@+id/progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/dateFormat" />
 
         <Button
             android:id="@+id/registerButton"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="@string/register"
             android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progress"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.855"
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
         <TextView
@@ -144,9 +152,37 @@
             android:fontFamily="@font/poppinsmedium"
             android:text="@string/login_here"
             app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerButton"
             tools:targetApi="jelly_bean" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/dateFormat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"
+            app:layout_constraintVertical_bias="0.0" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
