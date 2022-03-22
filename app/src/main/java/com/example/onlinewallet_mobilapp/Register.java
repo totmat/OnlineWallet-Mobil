@@ -24,7 +24,7 @@ import com.vishnusivadas.advanced_httpurlconnection.PutData;
 import java.util.Calendar;
 
 public class Register extends AppCompatActivity {
-    EditText mDateFormat;
+    EditText mDateFormat ,textEditTextDatePicker ;
     //Date picker dialog
     DatePickerDialog.OnDateSetListener onDateSetListener;
 
@@ -69,6 +69,7 @@ public class Register extends AppCompatActivity {
 
         textInputEditTextFullname = findViewById(R.id.fullname);
         textInputEditTextUsername = findViewById(R.id.username);
+        textEditTextDatePicker = findViewById(R.id.dateFormat);
         textInputEditTextPassword = findViewById(R.id.password);
         textInputEditTextEmail = findViewById(R.id.email);
         registerButton = findViewById(R.id.registerButton);
@@ -86,7 +87,8 @@ public class Register extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fullname, username, password, email;
+                String fullname, dateFormat , username, password, email;
+                dateFormat = String.valueOf(textEditTextDatePicker.getText());
                  fullname = String.valueOf(textInputEditTextFullname.getText());
                 username = String.valueOf(textInputEditTextUsername.getText());
                 password = String.valueOf(textInputEditTextPassword.getText());
@@ -99,19 +101,22 @@ public class Register extends AppCompatActivity {
                         public void run() {
                             //Starting Write and Read data with URL
                             //Creating array for parameters
-                            String[] field = new String[4];
+                            String[] field = new String[5];
                             field[0] = "fullname";
-                            field[1] = "username";
-                            field[2] = "password";
-                            field[3] = "email";
+                            field[1] = "dateFormat";
+                            field[2] = "username";
+                            field[3] = "password";
+                            field[4] = "email";
                             //Creating array for data
-                            String[] data = new String[4];
+                            String[] data = new String[5];
                             data[0] = fullname;
-                            data[1] = username;
-                            data[2] = password;
-                            data[3] = email;
-                            //PutData putData = new PutData("http://localhost/registerlogin/signup.php", "POST", field, data);
-                            PutData putData = new PutData("http://10.0.11.109/reglog/signup.php", "POST", field, data);
+                            data[1] = dateFormat;
+                            data[2] = username;
+                            data[3] = password;
+                            data[4] = email;
+
+                            //PutData putData = new PutData("http://localhost/onlinewallet/signup.php", "POST", field, data);
+                            PutData putData = new PutData("http://10.0.11.109/onlinewallet/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
