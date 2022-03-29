@@ -1,7 +1,5 @@
 package com.example.onlinewallet_mobilapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +10,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
@@ -59,8 +59,8 @@ public class Login extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = username;
                             data[1] = password;
-                            //PutData putData = new PutData("http://localhost/onlinewallet/login.php", "POST", field, data);
-                            PutData putData = new PutData("http://10.0.11.109/onlinewallet/login.php", "POST", field, data);
+                            //PutData putData = new PutData("http://localhost/registerlogin/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://10.0.11.117/onlinewallet/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);

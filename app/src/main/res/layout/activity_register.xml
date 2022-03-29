@@ -127,8 +127,8 @@
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dateFormat" />
+            app:layout_constraintStart_toStartOf="parent"/>
+
 
         <Button
             android:id="@+id/registerButton"
@@ -156,32 +156,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerButton"
             tools:targetApi="jelly_bean" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dateTIL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <EditText
-            android:id="@+id/dateFormat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/date"
-            android:importantForAutofill="no"
-            android:inputType="date"
-            android:minHeight="48dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"
-            app:layout_constraintVertical_bias="0.0" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
