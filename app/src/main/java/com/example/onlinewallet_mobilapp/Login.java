@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.onlinewallet_mobilapp.activities.MainActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
@@ -60,7 +61,7 @@ public class Login extends AppCompatActivity {
                             data[0] = username;
                             data[1] = password;
                             //PutData putData = new PutData("http://localhost/registerlogin/login.php", "POST", field, data);
-                            PutData putData = new PutData("http://10.0.11.117/onlinewallet/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://192.168.0.27/onlinewallet/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);

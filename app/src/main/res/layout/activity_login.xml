@@ -37,7 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsmedium"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            android:textColorHint="#616161"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -59,7 +60,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppinsmedium"
             android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            android:textColorHint="#616161"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
     <ProgressBar
         android:id="@+id/progressLogin"
@@ -70,11 +72,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginBtn" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/LoginBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_background_1"
         android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
