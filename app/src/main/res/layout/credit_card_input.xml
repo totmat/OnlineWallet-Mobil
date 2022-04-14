@@ -100,7 +100,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_submit_payment"
-                android:text="@string/pay"
+                android:text="@string/upload"
                 android:paddingTop="@dimen/button_vertical_padding"
                 android:paddingBottom="@dimen/button_vertical_padding"
                 app:layout_constraintTop_toBottomOf="@+id/til_first_name"

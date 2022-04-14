@@ -18,9 +18,9 @@
     <string name="expiration_date">MM/YY</string>
     <string name="cvv">Security code</string>
 
-    <string name="pay">Submit Payment</string>
+    <string name="upload">upload</string>
 
-    <string name="successful">Payment Successful</string>
+    <string name="successful">Successful</string>
     <string name="ok">OK</string>
 
     <string name="please_enter_first_name">Please enter your first name</string>
