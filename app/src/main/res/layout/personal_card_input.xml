@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_personal_card_document_iD"
+        style="@style/PersonalCardInputLayoutBoxes."
+        android:layout_width="203dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/personal_card_document_iD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_personal_card_document_iD"
+            style="@style/InputEditTexts"
+            android:inputType="number"
+            android:maxLength="@integer/maximum_personal_card_document_iD_length"
+            android:textColorHint="#757575"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_personal_card_fullname"
+        style="@style/PersonalCardInputLayoutBoxes."
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:hint="@string/personal_card_fullname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_personal_card_fullname"
+            style="@style/InputEditTexts"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_personal_card_gender"
+        style="@style/PersonalCardInputLayoutBoxes."
+        android:layout_width="114dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="68dp"
+        android:hint="@string/personal_card_gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_personal_card_gender"
+            style="@style/InputEditTexts"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_personal_card_date_year"
+        style="@style/PersonalCardInputLayoutBoxes."
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/personal_card_date_year"
+        app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_personal_date_year"
+            style="@style/InputEditTexts"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_personal_card_date_month"
+        style="@style/PersonalCardInputLayoutBoxes."
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/personal_card_date_month"
+        app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="134dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_personal_date_month"
+            style="@style/InputEditTexts"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_personal_card_date_day"
+        style="@style/PersonalCardInputLayoutBoxes."
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/personal_card_date_day"
+        app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="244dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_personal_date_day"
+            style="@style/InputEditTexts"
+            android:inputType="number"
+            android:textColorHint="#757575"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit_upload_personal_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingTop="@dimen/button_vertical_padding"
+        android:paddingBottom="@dimen/button_vertical_padding"
+        android:text="@string/upload"
+        app:layout_constraintTop_toBottomOf="@+id/til_personal_card_date_month"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="136dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

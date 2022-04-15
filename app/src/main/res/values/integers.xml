@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="maximum_credit_card_number_length">19</integer>
+    <integer name="maximum_personal_card_document_iD_length">8</integer>
     <integer name="expiration_date_length_including_slash">5</integer>
     <integer name="maximum_cvv_length">3</integer>
+
 </resources>
