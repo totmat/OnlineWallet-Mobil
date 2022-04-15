@@ -1,5 +1,7 @@
 package com.example.onlinewallet_mobilapp.activities;
 
+import com.example.onlinewallet_mobilapp.Register;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -8,15 +10,18 @@ import com.example.onlinewallet_mobilapp.data.CreditCard;
 import com.example.onlinewallet_mobilapp.databinding.ActivityMainBinding;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-public class MainActivity extends AppCompatActivity {
+public class CreditCardMain extends AppCompatActivity {
     private ActivityMainBinding mBinding;
     private TextInputLayout obCreditCardNumber;
     private TextInputLayout obExpirationDate;
@@ -28,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText etCvv;
     private TextInputEditText etFirstName;
     private TextInputEditText etLastName;
+
+    TextView textViewPersonalCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
         etFirstName = mBinding.creditCardInputPanel.etFirstName;
         etLastName = mBinding.creditCardInputPanel.etLastName;
 
+        textViewPersonalCard = findViewById(R.id.personalText);
+
+        textViewPersonalCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PersonalCardMain.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         mBinding.creditCardInputPanel.btnSubmitPayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     public void validateCard(View view) {
         clearAnyPreviousErrorMessages();
@@ -108,4 +127,5 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton(buttonText, null)
                 .show();
     }
+
 }

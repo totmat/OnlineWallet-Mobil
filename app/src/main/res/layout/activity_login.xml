@@ -63,10 +63,11 @@
             android:textColorHint="#616161"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <ProgressBar
         android:id="@+id/progressLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="2dp"
+        android:layout_height="8dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

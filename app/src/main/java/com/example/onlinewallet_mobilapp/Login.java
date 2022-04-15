@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.onlinewallet_mobilapp.activities.MainActivity;
+import com.example.onlinewallet_mobilapp.activities.CreditCardMain;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
@@ -31,6 +31,7 @@ public class Login extends AppCompatActivity {
         loginButton = findViewById(R.id.LoginBtn);
         textViewRegister = findViewById(R.id.registerText);
         progressBar = findViewById(R.id.progressLogin);
+
         textViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +69,7 @@ public class Login extends AppCompatActivity {
                                     String result = putData.getResult();
                                     if(result.equals("Login Success")){
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        Intent intent = new Intent(getApplicationContext(), CreditCardMain.class);
                                         intent.putExtra("Username", username);
                                         startActivity(intent);
                                         finish();
