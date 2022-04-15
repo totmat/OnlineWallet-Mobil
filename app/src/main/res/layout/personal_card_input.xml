@@ -47,7 +47,6 @@
                 android:id="@+id/et_personal_card_fullname"
                 style="@style/InputEditTexts"
                 android:layout_height="50dp"
-                android:inputType="number"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
 
@@ -67,7 +66,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_card_gender"
                 style="@style/InputEditTexts"
-                android:inputType="number"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
 
