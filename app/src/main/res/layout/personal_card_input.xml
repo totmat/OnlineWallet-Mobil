@@ -15,18 +15,15 @@
             android:layout_width="190dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:hint="@string/personal_card_document_iD"
+            android:hint="@string/document_iD"
             app:layout_constraintStart_toStartOf="@+id/til_personal_card_fullname"
-            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_card_document_iD"
                 style="@style/InputEditTexts"
-                android:inputType="number"
                 android:maxLength="@integer/maximum_personal_card_document_iD_length"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -36,19 +33,17 @@
             android:layout_width="310dp"
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
-            android:hint="@string/personal_card_fullname"
+            android:hint="@string/personal_fullname"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_card_fullname"
                 style="@style/InputEditTexts"
                 android:layout_height="50dp"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,16 +53,15 @@
             android:layout_width="114dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:hint="@string/personal_card_gender"
+            android:hint="@string/gender"
             app:layout_constraintEnd_toEndOf="@+id/til_personal_card_fullname"
-            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_card_gender"
                 style="@style/InputEditTexts"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
+                android:maxLength="5"
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,17 +70,16 @@
             style="@style/PersonalCardInputLayoutBoxes."
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:hint="@string/personal_card_date_year"
+            android:hint="@string/year"
             app:layout_constraintStart_toStartOf="@+id/til_personal_card_document_iD"
-            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_date_year"
                 style="@style/InputEditTexts"
                 android:inputType="number"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
+                android:maxLength="4"
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,18 +88,17 @@
             style="@style/PersonalCardInputLayoutBoxes."
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:hint="@string/personal_card_date_month"
+            android:hint="@string/month"
             app:layout_constraintEnd_toStartOf="@+id/til_personal_card_date_day"
             app:layout_constraintStart_toEndOf="@+id/til_personal_card_date_year"
-            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_date_month"
                 style="@style/InputEditTexts"
                 android:inputType="number"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
+                android:maxLength="2"
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,17 +107,16 @@
             style="@style/PersonalCardInputLayoutBoxes."
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:hint="@string/personal_card_date_day"
+            android:hint="@string/day"
             app:layout_constraintEnd_toEndOf="@+id/til_personal_card_gender"
-            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_gender"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_gender">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_date_day"
                 style="@style/InputEditTexts"
                 android:inputType="number"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
+                android:maxLength="2"
+                android:textColorHint="#757575" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,12 +127,11 @@
             android:layout_marginTop="12dp"
             android:paddingTop="@dimen/button_vertical_padding"
             android:paddingBottom="@dimen/button_vertical_padding"
-            android:text="@string/upload"
+            android:text="@string/personal_upload"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_date_month"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/til_personal_card_date_month" />
 
         <TextView
             android:id="@+id/credit_cardText"

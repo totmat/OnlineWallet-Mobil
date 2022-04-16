@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/button_vertical_padding"
             android:paddingBottom="@dimen/button_vertical_padding"
-            android:text="@string/upload"
+            android:text="@string/credit_upload"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

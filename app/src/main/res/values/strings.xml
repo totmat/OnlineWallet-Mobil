@@ -18,7 +18,8 @@
     <string name="expiration_date">MM/YY</string>
     <string name="cvv">Security code</string>
 
-    <string name="upload">upload</string>
+    <string name="credit_upload">upload</string>
+    <string name="personal_upload">upload</string>
 
     <string name="successful">Successful</string>
     <string name="ok">OK</string>
@@ -31,14 +32,13 @@
     <string name="invalid_cvv">Invalid security code</string>
 
 
-    <string name="personal_card_document_iD">Document ID</string>
-    <string name="personal_card_fullname">Fullname</string>
-    <string name="personal_card_gender">Gender</string>
-    <string name="personal_card_date_year">Year</string>
-    <string name="personal_card_date_month">Month</string>
-    <string name="personal_card_date_day">Day</string>
+    <string name="document_iD">Document ID</string>
+    <string name="personal_fullname">Fullname</string>
+    <string name="gender">Gender</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
 
-    <string name="upload_personal_card">upload</string>
     <string name="add_personal_card">Add personal card</string>
     <string name="add_credit_card">Add credit card</string>
 
