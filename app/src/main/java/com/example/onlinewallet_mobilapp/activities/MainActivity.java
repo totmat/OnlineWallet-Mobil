@@ -21,7 +21,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-public class CreditCardMain extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding mBinding;
     private TextInputLayout obCreditCardNumber;
     private TextInputLayout obExpirationDate;
@@ -99,13 +99,9 @@ public class CreditCardMain extends AppCompatActivity {
         } else {
             closeSoftKeyboard(view);
             CreditCard creditCard = new CreditCard(creditCardNumber, expirationDate, cvv, firstName, lastName);
-            alertDialog(submitCreditCard(creditCard), null, getString(R.string.ok));
         }
     }
 
-    private String submitCreditCard(CreditCard creditCard) {
-        return getString(R.string.successful);
-    }
 
     private void clearAnyPreviousErrorMessages() {
         obCreditCardNumber.setError(null);

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.OnlineWalletMobilApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activities.CreditCardMain"
+            android:name=".activities.MainActivity"
             android:exported="true"/>
         <activity
             android:name=".activities.PersonalCardMain"

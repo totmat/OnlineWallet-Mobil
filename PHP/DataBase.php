@@ -65,21 +65,35 @@ class DataBase
             return true;
         } else return false;
     }
-	
-	function kolcsonzesUploadf($table, $username, $carBrand, $carType, $rentalDay, $rentalPrice)
+
+	 function bankkartyafeltoltes($table, $cardNumber, $date, $securityCode, $firstName, $lastName)
     {
-        $username = $this->prepareData($username);
-        $carBrand = $this->prepareData($carBrand);
-        $carType = $this->prepareData($carType);
-        $rentalDay= $this->prepareData($rentalDay);
-        $rentalPrice= $this->prepareData($rentalPrice);
+        $cardNumber = $this->prepareData($cardNumber);
+        $date = $this->prepareData($date);
+        $securityCode = $this->prepareData($securityCode);
+        $firstName = $this->prepareData($firstName);
+        $lastName = $this->prepareData($lastName);
         $this->sql =
-            "INSERT INTO " . $table . " (username, carBrand, carType, rentalDay, rentalPrice) VALUES ('" . $username . "','" . $carBrand . "','" . $carType . "','" . $rentalDay. "','" . $rentalPrice. "')";
+            "INSERT INTO " . $table . " (cardNumber, date, securityCode, firstName, lastName) VALUES ('" . $cardNumber . "','" . $date . "','" . $securityCode . "','" . $firstName . "','" . $lastName . "')";
         if (mysqli_query($this->connect, $this->sql)) {
             return true;
         } else return false;
     }
 
+    function igazolvanyfeltoltes($table, $doucmentId, $fullname, $gender, $year, $month, $day)
+    {
+        $doucmentId = $this->prepareData($doucmentId);
+        $fullname = $this->prepareData($fullname);
+        $gender = $this->prepareData($gender);
+        $year = $this->prepareData($year);
+        $month = $this->prepareData($month);
+        $day = $this->prepareData($day);
+        $this->sql =
+            "INSERT INTO " . $table . " (doucmentId, fullname, gender, year, month, day) VALUES ('" . $doucmentId . "','" . $fullname . "','" . $gender . "','" . $year . "','" . $month . "','" . $day . "')";
+        if (mysqli_query($this->connect, $this->sql)) {
+            return true;
+        } else return false;
+    }
 }
 
 ?>
