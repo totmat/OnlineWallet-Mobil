@@ -80,16 +80,16 @@ class DataBase
         } else return false;
     }
 
-    function igazolvanyfeltoltes($table, $doucmentId, $fullname, $gender, $year, $month, $day)
+    function igazolvanyfeltoltes($table, $documentId, $fullname, $gender, $year, $month, $day)
     {
-        $doucmentId = $this->prepareData($doucmentId);
+        $documentId = $this->prepareData($documentId);
         $fullname = $this->prepareData($fullname);
         $gender = $this->prepareData($gender);
         $year = $this->prepareData($year);
         $month = $this->prepareData($month);
         $day = $this->prepareData($day);
         $this->sql =
-            "INSERT INTO " . $table . " (doucmentId, fullname, gender, year, month, day) VALUES ('" . $doucmentId . "','" . $fullname . "','" . $gender . "','" . $year . "','" . $month . "','" . $day . "')";
+            "INSERT INTO " . $table . " (documentId, fullname, gender, year, month, day) VALUES ('" . $documentId . "','" . $fullname . "','" . $gender . "','" . $year . "','" . $month . "','" . $day . "')";
         if (mysqli_query($this->connect, $this->sql)) {
             return true;
         } else return false;

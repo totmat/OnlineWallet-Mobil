@@ -1,43 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#636363"
+    tools:context=".MainActivity">
 
-    <ScrollView android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/general_layout_padding"
-            tools:context=".activities.MainActivity">
+    <ImageView
+        android:id="@+id/personal_image_register"
+        android:layout_width="318dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/personal_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditCardButton" />
 
-            <include
-                android:id="@+id/credit_card_input_panel"
-                layout="@layout/credit_card_input"
-                android:layout_width="365dp"
-                android:layout_height="331dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image"
-                app:layout_constraintWidth_percent="@dimen/width_percentage" />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="318dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="120dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/credit_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="318dp"
-                android:layout_height="165dp"
-                android:layout_gravity="center_horizontal|bottom"
-                android:adjustViewBounds="true"
-                android:maxWidth="40dp"
-                android:maxHeight="40dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/credit_card"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/personalCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Personal ID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personal_image_register" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/creditCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Credit Card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
 
-</layout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

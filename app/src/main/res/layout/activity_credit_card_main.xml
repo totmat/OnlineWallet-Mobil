@@ -4,21 +4,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.PersonalCardMain">
+    android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/general_layout_padding"
-            tools:context=".activities.PersonalCardMain">
+            android:padding="@dimen/general_layout_padding">
 
             <include
-                android:id="@+id/personal_card_input_panel"
-                layout="@layout/personal_card_input"
+                android:id="@+id/credit_card_input_panel"
+                layout="@layout/credit_card_input"
                 android:layout_width="365dp"
                 android:layout_height="331dp"
-                android:layout_marginTop="52dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -30,16 +27,16 @@
                 android:layout_width="318dp"
                 android:layout_height="165dp"
                 android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginTop="4dp"
                 android:adjustViewBounds="true"
                 android:maxWidth="40dp"
                 android:maxHeight="40dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/personal_card"
+                android:src="@drawable/credit_card"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 </RelativeLayout>
+
+

@@ -1,6 +1,4 @@
-package com.example.onlinewallet_mobilapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.onlinewallet_mobilapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,39 +6,64 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.onlinewallet_mobilapp.activities.MainActivity;
+import com.example.onlinewallet_mobilapp.R;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.onlinewallet_mobilapp.MainActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
-public class CreditCardInput extends AppCompatActivity {
 
-    TextInputEditText til_credit_card_number, til_expiration_date,til_cvv,til_first_name,til_last_name;
-    Button btn_submit_payment;
+public class CreditCardMain extends AppCompatActivity {
+
+    TextInputEditText textInputLayoutcardNumber, textInputLayoutDate, textInputLayoutSecurityCode, textInputLayoutFirstName, textInputLayoutLastName;
+    Button creditCardUpload;
+    TextView textViewPersonalCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.credit_card_input);
-        til_credit_card_number = findViewById(R.id.et_credit_card_number);
-        til_expiration_date = findViewById(R.id.et_expiration_date);
-        til_cvv = findViewById(R.id.et_cvv);
-        til_first_name = findViewById(R.id.et_first_name);
-        til_last_name = findViewById(R.id.et_last_name);
-        btn_submit_payment = findViewById(R.id.btn_submit_payment);
+        setContentView(R.layout.activity_credit_card_main);
 
-        btn_submit_payment.setOnClickListener(new View.OnClickListener() {
+        textInputLayoutcardNumber = findViewById(R.id.et_credit_card_number);
+        textInputLayoutDate = findViewById(R.id.et_expiration_date);
+        textInputLayoutSecurityCode = findViewById(R.id.et_cvv);
+        textInputLayoutFirstName = findViewById(R.id.et_first_name);
+        textInputLayoutLastName = findViewById(R.id.et_last_name);
+        textViewPersonalCard = findViewById(R.id.personalText);
+        creditCardUpload = findViewById(R.id.btn_upload);
+
+        if (!validationSecurityCode())
+        {
+            return;
+        }
+
+        textViewPersonalCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        creditCardUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String cardNumber, date, securityCode, firstName, lastName;
-                cardNumber = String.valueOf(til_credit_card_number.getText());
-                date = String.valueOf(til_expiration_date.getText());
-                securityCode = String.valueOf(til_cvv.getText());
-                firstName = String.valueOf(til_first_name.getText());
-                lastName = String.valueOf(til_last_name.getText());
-                if(!cardNumber.equals("") && !date.equals("") && !securityCode.equals("") && !firstName.equals("") && !lastName.equals("")) { ;
+                cardNumber = String.valueOf(textInputLayoutcardNumber.getText());
+                date = String.valueOf(textInputLayoutDate.getText());
+                securityCode = String.valueOf(textInputLayoutSecurityCode.getText());
+                firstName = String.valueOf(textInputLayoutFirstName.getText());
+                lastName = String.valueOf(textInputLayoutLastName.getText());
+
+                if (!cardNumber.equals("") && !date.equals("") && !securityCode.equals("") && !firstName.equals("") && !lastName.equals("")) {
+                    ;
                     Handler handler = new Handler(Looper.getMainLooper());
                     handler.post(new Runnable() {
                         @Override
@@ -64,12 +87,12 @@ public class CreditCardInput extends AppCompatActivity {
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
-                                    if(result.equals("Card upload Success")){
+                                    if (result.equals("Card upload Success")) {
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
                                         finish();
-                                    }else{
+                                    } else {
                                         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                     }
                                     Log.i("PutData", result);
@@ -78,11 +101,38 @@ public class CreditCardInput extends AppCompatActivity {
                             //End Write and Read data with URL
                         }
                     });
-                }
-                else{
+                } else {
                     Toast.makeText(getApplicationContext(), "All fields required!", Toast.LENGTH_SHORT).show();
                 }
             }
+
         });
+
     }
+
+    private Boolean validationSecurityCode()
+    {
+        String val = textInputLayoutSecurityCode.getText().toString();
+        if(val.isEmpty())
+        {
+            textInputLayoutSecurityCode.setError("Hiba");
+            return false;
+        }
+        else if (val.length()>3)
+        {
+            textInputLayoutSecurityCode.setError("Hiba");
+            return false;
+        }
+        else
+        {
+            textInputLayoutSecurityCode.setError(null);
+            return true;
+        }
+    }
+
 }
+
+
+
+
+
