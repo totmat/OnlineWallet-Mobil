@@ -1,4 +1,4 @@
-# OnlineWallet-Mobil
-Online wallet mobilos applikáció
+Onilne wallet mobil app
 
-Ez az applikáció főleg az adatok feltöltésére szolgál az adatbázisban. 
+Célja:
+Ez az applikáció az adatok feltöltésére szolgál az adatbázisban. A bankkártya és az igazolvány adat feltöltést segíti elő.  
