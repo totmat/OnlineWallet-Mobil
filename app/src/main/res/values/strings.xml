@@ -40,6 +40,5 @@
     <string name="invalid_card_number">Invalid credit card number</string>
     <string name="invalid_expiration_date">Invalid MM/YY exp. date</string>
     <string name="invalid_cvv">Invalid security code</string>
-    <string name="ok">OK</string>
 
 </resources>

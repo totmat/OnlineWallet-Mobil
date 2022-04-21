@@ -20,7 +20,7 @@
         <item name="errorEnabled">true</item>
     </style>
 
-    <style name="PersonalCardInputLayoutBoxes."
+    <style name="PersonalCardInputLayoutBoxes"
         parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>

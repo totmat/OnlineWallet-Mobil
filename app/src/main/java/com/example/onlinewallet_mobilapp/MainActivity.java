@@ -11,8 +11,6 @@ import com.example.onlinewallet_mobilapp.activities.CreditCardMain;
 import com.example.onlinewallet_mobilapp.activities.PersonalCardMain;
 
 public class MainActivity extends AppCompatActivity {
-
-
     Button creditCardButton;
     Button personalCardButton;
 

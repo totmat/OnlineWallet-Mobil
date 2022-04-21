@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".activities.PersonalCardMain">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,17 +9,17 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_personal_card_document_iD"
-            style="@style/PersonalCardInputLayoutBoxes."
-            android:layout_width="190dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            style="@style/PersonalCardInputLayoutBoxes"
+            android:layout_marginEnd="@dimen/inner_vertical_input_margin"
             android:hint="@string/document_iD"
-            app:layout_constraintStart_toStartOf="@+id/til_personal_card_fullname"
+            app:layout_constraintEnd_toStartOf="@id/til_personal_card_gender"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_card_document_iD"
                 style="@style/InputEditTexts"
+                android:fontFamily="@font/sinmediasans"
                 android:maxLength="@integer/maximum_personal_card_document_iD_length"
                 android:textColorHint="#757575" />
 
@@ -30,19 +27,17 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_personal_card_fullname"
-            style="@style/PersonalCardInputLayoutBoxes."
-            android:layout_width="310dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="10dp"
+            style="@style/PersonalCardInputLayoutBoxes"
+            android:layout_marginTop="4dp"
             android:hint="@string/personal_fullname"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_card_fullname"
                 style="@style/InputEditTexts"
+                android:fontFamily="@font/sinmediasans"
                 android:layout_height="50dp"
                 android:textColorHint="#757575" />
 
@@ -50,17 +45,16 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_personal_card_gender"
-            style="@style/PersonalCardInputLayoutBoxes."
-            android:layout_width="114dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            style="@style/PersonalCardInputLayoutBoxes"
             android:hint="@string/gender"
-            app:layout_constraintEnd_toEndOf="@+id/til_personal_card_fullname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/til_personal_card_document_iD"
             app:layout_constraintTop_toBottomOf="@+id/til_personal_card_fullname">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_card_gender"
                 style="@style/InputEditTexts"
+                android:fontFamily="@font/sinmediasans"
                 android:maxLength="5"
                 android:textColorHint="#757575" />
 
@@ -68,17 +62,17 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_personal_card_date_year"
-            style="@style/PersonalCardInputLayoutBoxes."
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            style="@style/PersonalCardInputLayoutBoxes"
             android:hint="@string/year"
-            app:layout_constraintStart_toStartOf="@+id/til_personal_card_document_iD"
+            app:layout_constraintEnd_toStartOf="@id/til_personal_card_date_month"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_personal_card_document_iD">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_date_year"
                 style="@style/InputEditTexts"
                 android:inputType="number"
+                android:fontFamily="@font/sinmediasans"
                 android:maxLength="4"
                 android:textColorHint="#757575" />
 
@@ -86,9 +80,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_personal_card_date_month"
-            style="@style/PersonalCardInputLayoutBoxes."
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            style="@style/PersonalCardInputLayoutBoxes"
             android:hint="@string/month"
             app:layout_constraintEnd_toStartOf="@+id/til_personal_card_date_day"
             app:layout_constraintStart_toEndOf="@+id/til_personal_card_date_year"
@@ -98,6 +90,7 @@
                 android:id="@+id/et_personal_date_month"
                 style="@style/InputEditTexts"
                 android:inputType="number"
+                android:fontFamily="@font/sinmediasans"
                 android:maxLength="2"
                 android:textColorHint="#757575" />
 
@@ -105,17 +98,17 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_personal_card_date_day"
-            style="@style/PersonalCardInputLayoutBoxes."
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            style="@style/PersonalCardInputLayoutBoxes"
             android:hint="@string/day"
-            app:layout_constraintEnd_toEndOf="@+id/til_personal_card_gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/til_personal_card_date_month"
             app:layout_constraintTop_toBottomOf="@+id/til_personal_card_gender">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_personal_date_day"
                 style="@style/InputEditTexts"
                 android:inputType="number"
+                android:fontFamily="@font/sinmediasans"
                 android:maxLength="2"
                 android:textColorHint="#757575" />
 
@@ -123,14 +116,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_upload"
-            android:layout_width="311dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:paddingTop="@dimen/button_vertical_padding"
             android:paddingBottom="@dimen/button_vertical_padding"
+            android:fontFamily="@font/sinmediasans"
+            android:background="@drawable/btn_background_1"
             android:text="@string/personal_upload"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_personal_card_date_month" />
 
@@ -138,8 +131,8 @@
             android:id="@+id/credit_cardText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sinmediasans"
             android:text="@string/backToMain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -149,4 +142,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</RelativeLayout>
+</layout>

@@ -22,7 +22,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppinsbold"
+            android:fontFamily="@font/sinmediasans"
             android:gravity="center"
             android:text="@string/register"
             android:textSize="30sp"
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_fullname"
-                android:fontFamily="@font/poppinsmedium"
+                android:fontFamily="@font/sinmediasans"
                 tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_email"
-                android:fontFamily="@font/poppinsmedium"
+                android:fontFamily="@font/sinmediasans"
                 tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -94,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_username"
-                android:fontFamily="@font/poppinsmedium"
+                android:fontFamily="@font/sinmediasans"
                 tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -114,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_baseline_lock_24"
-                android:fontFamily="@font/poppinsmedium"
+                android:fontFamily="@font/sinmediasans"
                 tools:ignore="TextContrastCheck,SpeakableTextPresentCheck"
                 tools:targetApi="jelly_bean" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -137,6 +137,7 @@
             android:layout_height="wrap_content"
             android:text="@string/register"
             android:background="@drawable/btn_background_1"
+            android:fontFamily="@font/sinmediasans"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -149,7 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/poppinsmedium"
+            android:fontFamily="@font/sinmediasans"
             android:text="@string/login_here"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

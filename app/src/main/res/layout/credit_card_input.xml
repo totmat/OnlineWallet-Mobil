@@ -19,6 +19,8 @@
                 android:id="@+id/et_credit_card_number"
                 style="@style/InputEditTexts"
                 android:inputType="number"
+                android:digits="01234567890-"
+                android:fontFamily="@font/sinmediasans"
                 android:maxLength="@integer/maximum_credit_card_number_length"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
@@ -38,6 +40,7 @@
                 android:id="@+id/et_expiration_date"
                 style="@style/InputEditTexts"
                 android:digits="01234567890/"
+                android:fontFamily="@font/sinmediasans"
                 android:inputType="date"
                 android:maxLength="@integer/expiration_date_length_including_slash"
                 tools:ignore="TextContrastCheck" />
@@ -57,6 +60,7 @@
                 android:id="@+id/et_cvv"
                 style="@style/InputEditTexts"
                 android:inputType="number"
+                android:fontFamily="@font/sinmediasans"
                 android:maxLength="@integer/maximum_cvv_length"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
@@ -75,6 +79,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_first_name"
                 style="@style/FirstOrLastNameInput"
+                android:fontFamily="@font/sinmediasans"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
 
@@ -92,6 +97,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_last_name"
                 style="@style/FirstOrLastNameInput"
+                android:fontFamily="@font/sinmediasans"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
 
@@ -104,6 +110,8 @@
             android:paddingTop="@dimen/button_vertical_padding"
             android:paddingBottom="@dimen/button_vertical_padding"
             android:text="@string/credit_upload"
+            android:background="@drawable/btn_background_1"
+            android:fontFamily="@font/sinmediasans"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:fontFamily="@font/poppinsmedium"
+            android:fontFamily="@font/sinmediasans"
             android:text="@string/backToMain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

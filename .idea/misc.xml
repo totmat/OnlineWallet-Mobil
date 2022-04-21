@@ -12,6 +12,7 @@
         <entry key="..\:/Aminden/OnlineWalletMobilApp/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/sz0aratam/AndroidStudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_login.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/sz0aratam/AndroidStudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_register.xml" value="0.34556159420289856" />
+        <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/drawable/btn_background_1.xml" value="0.1" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/drawable/ic_email.xml" value="0.1" />
@@ -19,10 +20,10 @@
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/drawable/ic_username.xml" value="0.1" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/drawable/template_credit_card.xml" value="0.2815" />
-        <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_credit_card_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_credit_card_main.xml" value="0.33" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_personal_card_main.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_personal_card_main.xml" value="0.33" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_personal_credit_card_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/activity_register.xml" value="0.2515625" />
         <entry key="..\:/Users/tmate/StudioProjects/OnlineWallet-Mobil/app/src/main/res/layout/credit_card_input.xml" value="0.25" />
