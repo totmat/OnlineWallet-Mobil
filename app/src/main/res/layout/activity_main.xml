@@ -4,9 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#636363"
+    android:background="@drawable/gradient_middle"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sinmediasans"
+        android:gravity="center"
+        android:text="@string/welcomeText"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sinmediasans"
+        android:gravity="left"
+        android:text="@string/choose"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ImageView
         android:id="@+id/personal_image_register"
@@ -28,26 +52,26 @@
         android:id="@+id/personalCardButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Personal ID"
+        android:fontFamily="@font/sinmediasans"
+        android:text="Add Personal Card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personal_image_register" />
+
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="318dp"
         android:layout_height="165dp"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
         android:maxWidth="40dp"
         android:maxHeight="40dp"
         android:scaleType="fitCenter"
         android:src="@drawable/credit_card"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/creditCardButton"

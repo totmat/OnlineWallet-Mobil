@@ -190,7 +190,7 @@ public class CreditCardMain extends AppCompatActivity {
                             data[2] = securityCode;
                             data[3] = firstName;
                             data[4] = lastName;
-                            PutData putData = new PutData("http://192.168.0.27/onlinewallet/bankkartyafeltoltes.php", "POST", field, data);
+                            PutData putData = new PutData("http://10.0.11.117/onlinewallet/bankkartyafeltoltes.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();

@@ -102,7 +102,7 @@ public class PersonalCardMain extends AppCompatActivity {
                             data[3] = year;
                             data[4] = month;
                             data[5] = day;
-                            PutData putData = new PutData("http://192.168.0.27/onlinewallet/igazolvanyfeltoltes.php", "POST", field, data);
+                            PutData putData = new PutData("http://10.0.11.117/onlinewallet/igazolvanyfeltoltes.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
