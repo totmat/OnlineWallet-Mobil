@@ -20,3 +20,15 @@ Bejelentkezés fgelülettel találkozunk először, ahol ha már van fiókunk to
 
 
     
+## A szoftver működés közben
+Bejelentkező oldal
+![App Screenshot](https://github.com/totmat/OnlineWallet-Mobil/blob/master/Screenshot/login.jpg)
+Regisztrációs oldal
+![App Screenshot](https://github.com/totmat/OnlineWallet-Mobil/blob/master/Screenshot/register.jpg)
+Főmenü
+![App Screenshot](https://github.com/totmat/OnlineWallet-Mobil/blob/master/Screenshot/main.jpg)
+Bankkártya feltöltés oldal
+![App Screenshot](https://https://github.com/totmat/OnlineWallet-Mobil/blob/master/Screenshot/creditcardmain.jpg)
+Személyigazolvány feltöltés oldal
+![App Screenshot](https://https://github.com/totmat/OnlineWallet-Mobil/blob/master/Screenshot/personalcardmain.jpg)
+
