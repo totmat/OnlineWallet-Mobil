@@ -74,7 +74,7 @@ public class Register extends AppCompatActivity {
                             data[3] = email;
 
                             //PutData putData = new PutData("http://localhost/registerlogin/signup.php", "POST", field, data);
-                            PutData putData = new PutData("http://10.0.11.117/onlinewallet/signup.php", "POST", field, data);
+                            PutData putData = new PutData("http://IPCIM/onlinewallet/signup.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
